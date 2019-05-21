@@ -5,7 +5,8 @@
     :depends-on (:ningle :clack :cl-dbi :cffi)
     :components ((:module "src"
                      :components
-                     ((:file "cl-raspstudy"))))
+                     ((:file "cl-raspstudy" :depends-on ("libwiring-pi"))
+                         (:file "libwiring-pi"))))
     :description ""
     :long-description
     #.(read-file-string
